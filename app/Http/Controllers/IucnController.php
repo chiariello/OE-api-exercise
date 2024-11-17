@@ -11,7 +11,7 @@ class IucnController extends Controller
      */
     public function __invoke(IucnService $iucnService)
     {
-        return $iucnService->crSpecies();
+        return $iucnService->mammalSpecies();
     }
 }
 

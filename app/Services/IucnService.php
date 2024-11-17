@@ -29,7 +29,7 @@ class IucnService
         $conservationMeasures = $this->conservationMeasures($crSpecies);
 
         return $crSpecies->map(function ($element) use ($conservationMeasures) {
-            $element['cm'] = array_key_exists($element['taxonid'], $conservationMeasures) ?
+            $element['conservation_measures'] = array_key_exists($element['taxonid'], $conservationMeasures) ?
                 $conservationMeasures[$element['taxonid']] :
                 '';
             return $element;
