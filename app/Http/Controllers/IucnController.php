@@ -6,10 +6,13 @@ use App\Services\IucnService;
 
 class IucnController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(IucnService $iucnService)
+
+    public function getCriticallyEndangered(IucnService $iucnService)
+    {
+        return $iucnService->crSpecies();
+    }
+
+    public function getMammals(IucnService $iucnService)
     {
         return $iucnService->mammalSpecies();
     }

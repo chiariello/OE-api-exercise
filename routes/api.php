@@ -1,12 +1,10 @@
 <?php
 
 use App\Http\Controllers\IucnController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
-
-
-Route::get('/iucn', IucnController::class);
+Route::controller(IucnController::class)
+    ->group(function () {
+        Route::get('/iucn/species/critically-endangered', 'getCriticallyEndangered');
+        Route::get('/iucn/species/mammals', 'getMammals');
+    });
