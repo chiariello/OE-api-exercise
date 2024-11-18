@@ -16,7 +16,7 @@ Per installare il progetto è richiesto [Docker](https://www.docker.com/)
   -u "$(id -u):$(id -g)" \
   -v $(pwd):/var/www/html \
   -w /var/www/html \
-  laravelsail/php81-composer:latest \
+  laravelsail/php83-composer:latest \
   composer install --ignore-platform-reqs
 ```
 
