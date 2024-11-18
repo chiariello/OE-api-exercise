@@ -32,6 +32,12 @@ Per installare il progetto è richiesto [Docker](https://www.docker.com/)
 ./vendor/bin/sail artisan key:generate
 ```
 
+- Eseguire le migration
+
+```
+./vendor/bin/sail artisan migrate
+```
+
 - Valorizzare nel file .env la variabile IUCN_TOKEN con il token di autenticazione
 
 ```
